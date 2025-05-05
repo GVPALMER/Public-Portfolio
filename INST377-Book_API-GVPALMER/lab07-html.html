@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Lab07 - GVPALMER</title>
+        <script defer src="lab07-js.js"></script>
+
+        <style>
+            #loadingMessage{display:none;}
+            #resultsTable{display:none;}
+        </style>
+    </head>
+
+    <h1>Let's Lookup some Books</h1>
+    <h3>Please enter a book name:</h3>
+
+    <form id="bookSearch">
+        <input type="text" id="bookName" placeholder="enter title" required>
+        <input type="submit">
+    </form>
+
+    <h2 id="loadingMessage">Please wait while we load the books</h2>
+
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</html>

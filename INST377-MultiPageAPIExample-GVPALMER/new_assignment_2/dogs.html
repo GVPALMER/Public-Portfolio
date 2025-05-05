@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Dogs - Assignment 2 - INST377</title>
+        <link rel="stylesheet" href="dogs.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simpleslider"></script>
+        <script defer src="dogs.js"></script>
+    </head>
+    <body>
+        <h1 class="bar" id="head">Javascript-ing to the Max</h1>
+
+        <!--nav-->
+        <nav id="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <!--main-->
+        <div class="main">
+            <h2>DOGS!!!</h2>
+
+            <div id='dogSlider' style="width:612px; height:612px" data-simple-slider></div>
+            <div id="breedButtons"></div> 
+            <div id="breed-info-container"></div> 
+
+                                                          
+            <!--audio-->
+            <div class ="audio">
+                <h2>On this web page you may navigate with audio!</h2>
+                <p>Ensure your mic is enabled for the following features:</p>
+                <ul>
+                    <li>Navigate to another page</li>
+                        <ul>
+                            <li>Say: Navigate to &lt;page&gt;</li>
+                        </ul>
+                    <li>Change the page color</li>
+                        <ul>
+                            <li>Say: Change the color to &lt;color&gt;</li>
+                        </ul>
+                    <li>Say hello back to you!</li>
+                        <ul>
+                            <li>Say: Hello</li>
+                        </ul>
+                    <li>Load a dog breed</li>
+                        <ul>
+                            <li>Say: Load dog breed &lt;breed&gt;</li>
+                        </ul>
+
+                </ul>
+                <div class="audioButtons">
+                    <button onclick="startListen()">Start Listening</button>
+                    <button onclick="stopListen()">Stop Listening</button>
+                </div>
+            </div>
+    
+    </body>
+</html>
+

@@ -1,0 +1,119 @@
+html,body{
+    min-height: 100%;
+}
+
+html{
+    background-color: rgb(219, 255, 210);
+}
+
+ /*
+Main
+*/
+.main{
+    background-color: rgb(188, 240, 188);
+    padding:15px;
+    margin:5px;
+    border-radius: 20px;
+}
+
+.bar{
+    background-color: rgb(27, 82, 27);
+    text-align: center;
+    padding: 5px;
+    border-radius:20px;
+    color:white;
+}
+
+ /*
+Navigation
+*/
+#nav{
+    background-color: rgb(137, 189, 139);
+    text-align: center;
+    border-radius:20px;
+ }
+
+ #nav li:hover{
+    background-color: rgb(82, 192, 82);
+ }
+
+ #nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius:20px;
+ }
+
+/*
+Audio
+*/
+.audio{
+    background-color: rgb(117, 148, 117);
+    width:50%;
+    margin-left:25%;
+    margin-top:1%;
+    margin-bottom:1%;
+    padding:1%;
+    border-radius: 20px;
+}
+
+.audioButtons{
+    text-align: center;
+}
+
+.audioButtons button{
+    border-radius: 20px;
+    border:none;
+    margin:2%;
+    padding:2%;
+}
+
+.audioButtons button:active {
+    transform: translate(2px, 2px);
+}
+
+.audioButtons button:hover{
+    background-color: rgb(82, 192, 82);
+}
+
+/*
+Stock Chart
+*/
+#stockLookupButton{
+    border-radius: 20px;
+    border:none;
+    margin-top:1%;
+    padding:1%;
+    width:8%;
+}
+
+#stockLookupButton:hover{
+    background-color: rgb(82, 192, 82);
+}
+
+#stockLookupButton:active {
+    transform: translate(2px, 2px);
+}
+
+#stockChart{
+    height:10%;
+}
+
+/*
+Table
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.sentiment-icon {
+    width: 25%;
+    height: 25%;
+}

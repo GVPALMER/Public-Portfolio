@@ -1,0 +1,88 @@
+<html></html>
+    <head>
+        <title>Stocks - Assignment 2 - INST377</title>
+        <link rel="stylesheet" href="stocks.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2023-01-09/2023-01-09?apiKey=a99TAY7KQjoKefq5J9_87vSRisE8Afkb"></script>
+        <script defer src="stocks.js"></script>
+    </head>
+    
+    <body>
+        <h1 class="bar" id="head">Javascript-ing to the Max</h1>
+
+        <!--nav-->
+        <nav id="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <!--main-->
+        <div class="main">
+            <h2>Lookup some stocks!</h2>
+
+            <!--lookup-->
+            <form id="stockLookup">
+                <input type="text" id='ticker' placeholder="Input Ticker" required>
+                <br>
+                <select id="timeframe">
+                    <option value="30 Days">30 Days</option>
+                    <option value="60 Days">60 Days</option>
+                    <option value="90 Days">90 Days</option>
+                </select>
+                <br>
+                <button type="submit" id='stockLookupButton'>Lookup!</button>
+            </form>
+
+            <!--chart-->
+            <div>
+                <canvas id="stockChart"></canvas>
+            </div>
+
+            <!--table-->
+            <table id="stockTable">
+                <thead>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Comment Count</th>
+                        <th>Sentiment</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <!--audio-->
+            <div class ="audio">
+                <h2>On this web page you may navigate with audio!</h2>
+                <p>Ensure your mic is enabled for the following features:</p>
+                <ul>
+                    <li>Navigate to another page</li>
+                        <ul>
+                            <li>Say: Navigate to &lt;page&gt;</li>
+                        </ul>
+                    <li>Change the page color</li>
+                        <ul>
+                            <li>Say: Change the color to &lt;color&gt;</li>
+                        </ul>
+                    <li>Say hello back to you!</li>
+                        <ul>
+                            <li>Say: Hello</li>
+                        </ul>
+                    <li>Lookup a stock ticker</li>
+                        <ul>
+                            <li>Say: Lookup MSFT</li>
+                        </ul>
+                </ul>
+                <div class="audioButtons">
+                    <button onclick="startListen()">Start Listening</button>
+                    <button onclick="stopListen()">Stop Listening</button>
+                </div>
+            </div>
+    </body>
+</html>
+
