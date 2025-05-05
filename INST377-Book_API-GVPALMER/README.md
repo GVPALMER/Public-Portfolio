@@ -1,6 +1,5 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/6MVImWMN)
-# INST377-Lab
+# Part of INST377 - Dynamic Web Applications
 
-# Name (Please Input your name): Gabriel Palmer
+#### Use open library API to display user search results.
 
-# Comments: 
+#### https://openlibrary.org/developers/api
