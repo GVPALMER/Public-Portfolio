@@ -1,0 +1,11 @@
+# Submit server .submit file for
+#  Course CMSC131
+#  Project P7 -- Cafe 131: Cafe 131
+
+courseName=CMSC131
+semester=202108
+projectNumber=P7 -- Cafe 131
+courseKey=4a003b60ffcaf561
+authentication.type=ldap
+baseURL=https://submit.cs.umd.edu:443/fall2021
+submitURL=https://submit.cs.umd.edu:443/fall2021/eclipse/SubmitProjectViaEclipse
