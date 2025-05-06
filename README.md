@@ -8,7 +8,7 @@
   Because the notebooks include python code, regular text like introductions and analysis, and data outputs they APPEAR to be a lot more of the percentage than they should really account for.
 <p>
 
-####As of the most recent update the distrubution is as follows:
+#### As of the most recent update the distrubution is as follows:
 
 <ul>
   <li>Jupyter Notebook: (946083 / 1019792) × 100 ≈ 92.8%</li>
