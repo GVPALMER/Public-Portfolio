@@ -4,6 +4,8 @@
   This portfolio is a combination of personal and educational projects that I've compiled. Some are from 2021 and some are more recent (2025). They display varying different skill levels and a variety of skills.
 </h3>
 
+***
+
 <p>
   In the langauge distribution, the jupyter notebook percentage is all imported from google colab and in python.<br>
   Because the notebooks include python code, regular text like introductions and analysis, and data outputs they APPEAR to be a lot more of the percentage than they should really account for
