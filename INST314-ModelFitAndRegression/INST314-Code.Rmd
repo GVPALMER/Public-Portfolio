@@ -1,0 +1,264 @@
+---
+title: "Palmer - Challenge 5"
+output: html_document
+date: "2023-10-18"
+---
+
+ 
+## Q1
+
+I will use the same data sets and variables from my challenge 4. 
+Crime_Data_from_2020_to_Present and Meteorite_Landings
+
+
+```{r Crime_Data_from_2020_to_Present}
+`Crime_Data_from_2020_to_Present` <- 
+  read.csv("C:/Users/gabrp/Desktop/R-Projects/Crime_Data_from_2020_to_Present.csv")
+View(`Crime_Data_from_2020_to_Present`)
+```
+
+```{r Meteorite_Landings.csv}
+`Meteorite_Landings` <- 
+  read.csv("C:/Users/gabrp/Desktop/R-Projects/Meteorite_Landings.csv")
+View(`Meteorite_Landings.csv`)
+```
+
+## Q2
+
+```{r CRIME}
+library(ggplot2)
+Crime_Data_from_2020_to_Present$time <- as.integer(Crime_Data_from_2020_to_Present$TIME.OCC)
+Crime_Data_from_2020_to_Present$age <- as.integer(Crime_Data_from_2020_to_Present$Vict.Age)
+head(Crime_Data_from_2020_to_Present)
+```
+
+```{r CRIME}
+ggplot(data = Crime_Data_from_2020_to_Present, aes((time),(age))) + 
+  geom_point(size=.5)
+```
+
+```{r CRIME}
+crime_fit <- lm(age ~ time, data = Crime_Data_from_2020_to_Present)
+summary(crime_fit)
+
+# time is always the independent variable.
+```
+
+```{r CRIME}
+crime_fit_intercept = crime_fit$coefficients[["(Intercept)"]]
+crime_fit_time_slope = crime_fit$coefficients[["time"]]
+cat("The intercept is", crime_fit_intercept, "\nand the slope of time is",
+crime_fit_time_slope)
+```
+
+```{r CRIME}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point(size=.5) +
+geom_abline(intercept = crime_fit_intercept, slope = crime_fit_time_slope, color = 'red')
+```
+
+```{r CRIME}
+predicted_ys <- crime_fit_intercept + (crime_fit_time_slope * Crime_Data_from_2020_to_Present$time)
+```
+
+```{r CRIME}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point(size=.5) +
+geom_line(aes(y = predicted_ys),color = 'red')
+```
+
+
+
+```{r METEORITES}
+library(ggplot2)
+Meteorite_Landings$mass <- as.integer(Meteorite_Landings$mass..g.)
+Meteorite_Landings$year <- as.integer(Meteorite_Landings$year)
+head(Meteorite_Landings)
+```
+
+```{r METEORITES}
+ggplot(data = Meteorite_Landings, aes((year),(mass..g.))) + 
+  geom_point(size=.5)
+```
+
+```{r METEORITES}
+meteorite_fit <- lm(mass..g. ~ year, data = Meteorite_Landings)
+summary(meteorite_fit)
+
+# time is always the independent variable.
+```
+
+```{r METEORITES}
+meteorite_fit_intercept = meteorite_fit$coefficients[["(Intercept)"]]
+meteorite_fit_year_slope = meteorite_fit$coefficients[["year"]]
+cat("The intercept is", meteorite_fit_intercept, "\nand the slope of year is",
+meteorite_fit_year_slope)
+```
+
+```{r METEORITES}
+ggplot(data = Meteorite_Landings, aes(x = year, y = mass..g.)) + geom_point(size=.5) +
+geom_abline(intercept = meteorite_fit_intercept, slope = meteorite_fit_year_slope, color = 'red')
+```
+
+```{r METEORITES}
+predicted_ys <- meteorite_fit_intercept + (meteorite_fit_year_slope * Meteorite_Landings$year)
+```
+
+```{r METEORITES}
+ggplot(data = Meteorite_Landings, aes(x = year, y = mass..g.)) + geom_point(size=.5) +
+geom_line(aes(y = predicted_ys),color = 'red')
+```
+
+## Q3
+
+```{r CRIME}
+squared_errors <- (Meteorite_Landings$time - predicted_ys)^2
+mse_fit1 <- mean(squared_errors)
+print(mse_fit1)
+```
+
+
+
+
+```{r CRIME 1}
+adjustment_to_intercept_1 <- 5
+adjustment_to_slope_1 <- 0 
+
+adjusted_intercept_1 <- crime_fit_intercept + adjustment_to_intercept_1
+adjusted_slope_1 <- crime_fit_time_slope + adjustment_to_slope_1
+predictions <- adjusted_intercept_1 + (adjusted_slope_1 * Crime_Data_from_2020_to_Present$time) 
+MSE_after_adjustments = mean((Crime_Data_from_2020_to_Present$time - predictions)^2)
+print(MSE_after_adjustments)
+```
+
+```{r CRIME 1}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point() +
+geom_abline(intercept = crime_fit_intercept, slope = crime_fit_time_slope) +
+geom_abline(intercept = adjusted_intercept_1, slope = adjusted_slope_1, color = "red", linetype = 2)
+```
+
+
+
+
+```{r CRIME 2}
+adjustment_to_intercept_2 <- -5 
+adjustment_to_slope_2 <- 0 
+
+adjusted_intercept_2 <- crime_fit_intercept + adjustment_to_intercept_2
+adjusted_slope_2 <- crime_fit_time_slope + adjustment_to_slope_2
+predictions <- adjusted_intercept_2 + (adjusted_slope_2 * Crime_Data_from_2020_to_Present$time) 
+MSE_after_adjustments = mean((Crime_Data_from_2020_to_Present$time - predictions)^2)
+print(MSE_after_adjustments)
+```
+
+```{r CRIME 2}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point() +
+geom_abline(intercept = crime_fit_intercept, slope = crime_fit_time_slope) +
+geom_abline(intercept = adjusted_intercept_2, slope = adjusted_slope_2, color = "red", linetype = 2)
+```
+
+
+
+
+```{r CRIME 3}
+adjustment_to_intercept_3 <- 0
+adjustment_to_slope_3 <- 10
+
+adjusted_intercept_3 <- crime_fit_intercept + adjustment_to_intercept_3
+adjusted_slope_3 <- crime_fit_time_slope + adjustment_to_slope_3
+predictions <- adjusted_intercept_3 + (adjusted_slope_3 * Crime_Data_from_2020_to_Present$time) 
+MSE_after_adjustments = mean((Crime_Data_from_2020_to_Present$time - predictions)^2)
+print(MSE_after_adjustments)
+```
+
+```{r CRIME 3}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point() +
+geom_abline(intercept = crime_fit_intercept, slope = crime_fit_time_slope) +
+geom_abline(intercept = adjusted_intercept_3, slope = adjusted_slope_3, color = "red", linetype = 2)
+```
+
+
+
+
+```{r CRIME 4}
+adjustment_to_intercept_4 <- 0
+adjustment_to_slope_4 <- -10
+
+adjusted_intercept_4 <- crime_fit_intercept + adjustment_to_intercept_4
+adjusted_slope_4 <- crime_fit_time_slope + adjustment_to_slope_4
+predictions <- adjusted_intercept_4 + (adjusted_slope_4 * Crime_Data_from_2020_to_Present$time) 
+MSE_after_adjustments = mean((Crime_Data_from_2020_to_Present$time - predictions)^2)
+print(MSE_after_adjustments)
+```
+
+```{r CRIME 4}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point() +
+geom_abline(intercept = crime_fit_intercept, slope = crime_fit_time_slope) +
+geom_abline(intercept = adjusted_intercept_4, slope = adjusted_slope_4, color = "red", linetype = 2)
+```
+
+
+
+
+```{r CRIME 5}
+adjustment_to_intercept_5 <- 5
+adjustment_to_slope_5 <- 2
+
+adjusted_intercept_5 <- crime_fit_intercept + adjustment_to_intercept_5
+adjusted_slope_5 <- crime_fit_time_slope + adjustment_to_slope_5
+predictions <- adjusted_intercept_5 + (adjusted_slope_5 * Crime_Data_from_2020_to_Present$time) 
+MSE_after_adjustments = mean((Crime_Data_from_2020_to_Present$time - predictions)^2)
+print(MSE_after_adjustments)
+```
+
+```{r CRIME 5}
+ggplot(data = Crime_Data_from_2020_to_Present, aes(x = time, y = age)) + geom_point() +
+geom_abline(intercept = crime_fit_intercept, slope = crime_fit_time_slope) +
+geom_abline(intercept = adjusted_intercept_5, slope = adjusted_slope_5, color = "red", linetype = 2)
+```
+
+## Q4
+
+# this data set can be found at this link
+# https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/national/time-series/110/tavg/all/1/2020-2021?base_prd=true&begbaseyear=1901&endbaseyear=2000
+
+```{r temps}
+`temps` <- 
+  read.csv("C:/Users/gabrp/Desktop/R-Projects/temps.csv")
+View(`temps`)
+```
+
+```{r temps}
+ggplot(data = temps, aes(x = X2020, y = X2021)) + geom_point()
+```
+
+```{r temps}
+temps_fit <- lm(X2020 ~ X2021, data = temps)
+summary(temps_fit)
+```
+
+```{r temps}
+temps_fit_intercept = temps_fit$coefficients[["(Intercept)"]]
+temps_fit_slope = temps_fit$coefficients[["X2021"]]
+cat("The intercept is", temps_fit_intercept, "\nand the slope of X2021 is",
+temps_fit_slope)
+```
+
+```{r temps}
+ggplot(data = temps, aes(x = X2020, y = X2021)) + geom_point() +
+geom_abline(intercept = temps_fit_intercept, slope = temps_fit_slope, color = 'red') + geom_abline(intercept = 0, slope = 1, color = 'green')
+#this regression line does show a pattern that is consistent with regression to the mean
+#this can be explained simply because rainfall has plenty of different factors that go into it which can 
+#create very unexpected results
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
