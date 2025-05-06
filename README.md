@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Public-Portfolio</h1> 
 
 <h3>
