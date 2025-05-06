@@ -1,31 +1,3 @@
-leisure,activitytotal,date
-fair,50.0,1
-restaurant,50.38,2
-subscription,4.05,3
-grocery,6.4,4
-restaurant,94.45,4
-gift,28.46,5
-recreation,8.0,6
-online,48.0,7
-online,86.41,7
-other,21.45,7
-other,0.12,7
-other,1.45,8
-other,7.14,9
-online,5.0,15
-gift,472.0,16
-grocery,12.41,20
-gift,421.42,21
-online,1.45,22
-other,27.45,23
-other,14.0,23
-other,200.4,23
-online,1.24,23
-concert,421.42,24
-restaurant,86.41,24
-subscription,1.24,25
-grocery,28.46,26
-online,86.41,26
-subscription,28.46,26
-concert,472.0,27
-subscription,100.0,30
+version https://git-lfs.github.com/spec/v1
+oid sha256:f29d0f9c40574d04d434a9ab0802b6d90513dd38e7e911aa15ffee72df33fe5c
+size 510
