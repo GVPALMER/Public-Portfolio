@@ -5,6 +5,8 @@
 
 ### In the langauge distribution, the jupyter notebook percentage is all imported from google colab and in python.
 
+#### Because the notebooks include python code, regular text like introductions and analysis, and data outputs they APPEAR to be a lot more of the percentage than they should really account for.
+
 As of the most recent update the distrubution is as follows:
 
 Jupyter Notebook: (946083 / 1019792) × 100 ≈ 92.8%
