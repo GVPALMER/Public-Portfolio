@@ -11,12 +11,12 @@
 #### As of the most recent update the distrubution is as follows:
 
 <ul>
-  <li>Jupyter Notebook: (946083 / 1019792) × 100 ≈ 92.8%</li>
-  <li>Java: (37866 / 1019792) × 100 ≈ 3.7%</li>
-  <li>JavaScript: (11673 / 1019792) × 100 ≈ 1.1%</li>
-  <li>Python: (9879 / 1019792) × 100 ≈ 1.0%</li>
-  <li>HTML: (9199 / 1019792) × 100 ≈ 0.9%</li>
-  <li>CSS: (5092 / 1019792) × 100 ≈ 0.5%</li>
+  <li>Jupyter Notebook: (946083 / 1019792) × 100 ≈ **92.8%**</li>
+  <li>Java: (37866 / 1019792) × 100 ≈ **3.7%**</li>
+  <li>JavaScript: (11673 / 1019792) × 100 ≈ **1.1%**</li>
+  <li>Python: (9879 / 1019792) × 100 ≈ **1.0%**</li>
+  <li>HTML: (9199 / 1019792) × 100 ≈ **0.9%**</li>
+  <li>CSS: (5092 / 1019792) × 100 ≈ **0.5%**</li>
 </ul>
 
 
