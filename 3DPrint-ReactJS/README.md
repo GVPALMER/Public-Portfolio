@@ -2,8 +2,6 @@
 
 ## In development
 
-#### How to run
-
 #### In a bash terminal, run:
 
 <ul>
