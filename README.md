@@ -6,12 +6,15 @@
 
 ___
 
-Worked independently and with groups on multiple projects to build experience:
-Built multiple websites using HTML, CSS, and JavaScript, integrating APIs to improve accessibility and display dynamic data.
-Used React in a group project and am currently building a personal React site to explore the framework further and showcase my 3D printing projects.
-Wrote Python and R code for data analysis on topics like crime, loans, and student performance—often involving data cleaning and wrangling.
-Created SQL queries and subqueries to pull and manipulate data from academic databases.
-Developed classes and methods for larger Java projects with GUI components, including a restaurant simulation where inventory, menu items, sales, and profits had to interact in a full system.
+<p>Worked independently and with groups on multiple projects to build experience:</p>
+
+<ul>
+  <li>Built multiple websites using HTML, CSS, and JavaScript, integrating APIs to improve accessibility and display dynamic data.</li>
+  <li>Used React in a group project and am currently building a personal React site to explore the framework further and showcase my 3D printing projects.</li>
+  <li>Wrote Python and R code for data analysis on topics like crime, loans, and student performance—often involving data cleaning and wrangling.</li>
+  <li>Created SQL queries and subqueries to pull and manipulate data from academic databases.</li>
+  <li>Developed classes and methods for larger Java projects with GUI components, including a restaurant simulation where inventory, menu items, sales, and profits had to interact in a full system.</li>
+</ul>
 
 ___
 
