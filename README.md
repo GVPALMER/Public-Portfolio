@@ -4,8 +4,16 @@
   This portfolio is a combination of personal and educational projects that I've compiled. Some are from 2021 and some are more recent (2025). They display varying different skills and skill levels.
 </h3>
 
-<br>
-<br>
+___
+
+Worked independently and with groups on multiple projects to build experience:
+Built multiple websites using HTML, CSS, and JavaScript, integrating APIs to improve accessibility and display dynamic data.
+Used React in a group project and am currently building a personal React site to explore the framework further and showcase my 3D printing projects.
+Wrote Python and R code for data analysis on topics like crime, loans, and student performance—often involving data cleaning and wrangling.
+Created SQL queries and subqueries to pull and manipulate data from academic databases.
+Developed classes and methods for larger Java projects with GUI components, including a restaurant simulation where inventory, menu items, sales, and profits had to interact in a full system.
+
+___
 
 <p>
   In the langauge distribution, the jupyter notebook percentage is all imported from google colab and in python.<br>
