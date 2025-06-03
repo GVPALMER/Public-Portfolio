@@ -1,2 +1,0 @@
-*.csv filter=lfs diff=lfs merge=lfs -text
-INST314-ModelFitAndRegression/Crime_Data_from_2020_to_Present.csv filter=lfs diff=lfs merge=lfs -text
